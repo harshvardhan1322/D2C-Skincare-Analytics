@@ -48,11 +48,11 @@ repeat_rate = (
 )
 margin = gross_profit / net_revenue * 100 if net_revenue else 0
 
-cols = st.columns(6)
+cols = st.columns(6, gap="small")
 with cols[0]:
-    kpi_card("Net Revenue", format_inr(net_revenue), "Valid orders only")
+    kpi_card("Net Revenue", format_inr(net_revenue, compact=True), "Valid orders only")
 with cols[1]:
-    kpi_card("Gross Profit", format_inr(gross_profit), "Item-level cost basis")
+    kpi_card("Gross Profit", format_inr(gross_profit, compact=True), "Item-level cost basis")
 with cols[2]:
     kpi_card("Margin", format_pct(margin), "Blended")
 with cols[3]:

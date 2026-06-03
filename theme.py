@@ -80,9 +80,10 @@ def apply_theme() -> None:
                 background: rgba(255, 253, 249, .72);
                 border: 1px solid var(--border);
                 border-radius: 8px;
-                padding: 1rem 1.05rem;
+                padding: .95rem 1rem;
                 min-height: 118px;
                 box-shadow: 0 12px 30px rgba(74, 61, 44, .045);
+                overflow: hidden;
             }}
             .kpi-label {{
                 color: var(--muted);
@@ -93,10 +94,12 @@ def apply_theme() -> None:
             }}
             .kpi-value {{
                 font-family: {FONT_DISPLAY};
-                font-size: 2rem;
+                font-size: clamp(1.45rem, 2.2vw, 1.9rem);
                 color: var(--ink);
                 margin-top: .35rem;
                 line-height: 1.05;
+                white-space: nowrap;
+                max-width: 100%;
             }}
             .kpi-caption {{
                 color: var(--muted);
